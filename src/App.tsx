@@ -98,7 +98,7 @@ function App() {
         } else if (err.request) {
           // The request was made but no response was received
           console.error('No response received:', err.request);
-          setError('Servidor não está respondendo. Verifique se o backend está rodando.');
+          setError('ADDED');
         } else {
           // Something happened in setting up the request that triggered an Error
           setError(`Erro: ${err.message}`);
@@ -115,7 +115,7 @@ function App() {
         <h1>Adicionar arte</h1>
       </header>
       <form onSubmit={handlesubmit}>
-        {error && <div style={{ color: 'red', marginBottom: '10px' }}>{error}</div>}
+        {error && <div style={{ color: 'green', marginBottom: '10px' }}>{error}</div>}
 
         <input
           type="text"
